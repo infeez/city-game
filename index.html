@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>City Game</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="semantic.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="semantic.js"></script>
+    <script src="voice_handler.js"></script>
+    <script src="main.js"></script>
+    <script src="logic.js"></script>
+</head>
+
+<body>
+<div class="back">
+    <div class="ui raised very padded text container segment">
+        <div class="ui input">
+            <input id="city-name" type="text" placeholder="Город...">
+            <button id="go" class="ui button">Играть</button>
+            <button id="voice" class="ui button">Прослушать</button>
+        </div>
+        <div id="map" class="map"></div>
+    </div>
+</div>
+</body>
+</html>
