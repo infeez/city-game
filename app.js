@@ -2,6 +2,7 @@ var express = require("express");
 var cors = require('cors');
 var app = express();
 
+app.use('/', express.static('res'));
 app.use('/', express.static('img'));
 app.use('/', express.static('css'));
 app.use('/', express.static('src'));
