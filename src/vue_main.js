@@ -50,15 +50,15 @@ window.onload = function () {
                 axios.get('ru_cities.csv')
                     .then(function (data) {
                         var cities = data.data.split('\n');
-                        cities.forEach((function (city) {
-                            context.cityList.add(city.split(',')[0]);
-                        }));
                         for (var i = cities.length - 1; i > 0; i--) {
                             var j = Math.floor(Math.random() * (i + 1));
                             var temp = cities[i];
                             cities[i] = cities[j];
                             cities[j] = temp;
                         }
+                        cities.forEach((function (city) {
+                            context.cityList.add(city.split(',')[0]);
+                        }));
                     });
             },
             userActionButton: function () {
@@ -91,10 +91,10 @@ window.onload = function () {
                 var firstSybmolUserCity = userCity[0].toLowerCase();
                 if (lastCityGame) {
                     var lastCityGameLastSymbol = lastCityGame[lastCityGame.length - 1].toLowerCase();
-                    if(lastCityGameLastSymbol == 'ь' || lastCityGameLastSymbol == 'ъ' || lastCityGameLastSymbol == 'ы'){
+                    if (lastCityGameLastSymbol == 'ь' || lastCityGameLastSymbol == 'ъ' || lastCityGameLastSymbol == 'ы') {
                         lastCityGameLastSymbol = lastCityGame[lastCityGame.length - 2].toLowerCase();
                     }
-                    if(lastCityGameLastSymbol != firstSybmolUserCity) {
+                    if (lastCityGameLastSymbol != firstSybmolUserCity) {
                         context.errorMessage = 'Вы назвали город не на ту букву!';
                         return;
                     }
@@ -105,7 +105,7 @@ window.onload = function () {
                     return;
                 }
                 var lastSybmolUserCity = userCity[userCity.length - 1].toLowerCase();
-                if(lastSybmolUserCity == 'ь' || lastSybmolUserCity == 'ъ' || lastSybmolUserCity == 'ы'){
+                if (lastSybmolUserCity == 'ь' || lastSybmolUserCity == 'ъ' || lastSybmolUserCity == 'ы') {
                     lastSybmolUserCity = userCity[userCity.length - 2].toLowerCase();
                 }
                 context.cityList.forEach(function (city) {
