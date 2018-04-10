@@ -1,0 +1,8 @@
+services:
+  city-game:
+    image: city-game:latest
+    ports:
+      - 3000:3000
+
+version: '2.0'
+volumes: {}
