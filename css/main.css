@@ -1,6 +1,16 @@
-/*body {*/
+body {
     /*background-image: url(back.jpg) !important;*/
-/*}*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.full {
+    align-items: center;
+}
 
 .map {
     width: 500px; height: 500px;
